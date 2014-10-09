@@ -1,0 +1,45 @@
+// sign in user automatically if authtoken exists in local storage
+// if (auth_token_exists) {
+//     console.log('auth_token does exists, checking if it is valid');
+//     var still_valid = false;
+//     var link = 'https://lit-shore-1308.herokuapp.com/users/' + window.localStorage.getItem("id") + '/still_validated';
+//     // var link = 'http://localhost:3000/users/' + window.localStorage.getItem("id") + '/still_validated';
+//     $.ajax({
+//         headers: {
+//             Accept: "application/json; charset=utf-8"
+//         },
+//         url: link,
+//         type: 'GET',
+//         datatype: "JSON",
+//         // beforeSend: function() {
+//         //     $("#black_bg").fadeIn();
+//         //     $("#loading_img").fadeIn();
+//         // },
+//         data: {
+//             user_email: window.localStorage.getItem("email"),
+//             user_token: window.localStorage.getItem("tkn")
+//         },
+//         success: function jsSuccess(data, textStatus, jqXHR) {
+//             console.log('data to check if token is still valid, signup.js: ' + data.user);
+//             console.log(auth_token_exists == data.user.authentication_token);
+//             if (auth_token_exists == data.user.authentication_token) {
+//                 window.localStorage.setItem("email", data.user.email);
+//                 window.localStorage.setItem("tkn", data.user.authentication_token);
+//                 window.localStorage.setItem("id", data.user.id);
+//                 window.localStorage.setItem("counter", data.user.counter);
+//                 // window.location.href = "counter.html";
+//             } else {
+//                 $(".notice-red").removeClass("hidden");
+//             }
+//             console.log(jqXHR);e
+//         },
+//         error: function jsError(jqXHR, textStatus, errorThrown) {
+//             console.log("ajax failed");
+//             $('.notice-red').removeClass("hidden");
+//         },
+//         complete: function() {
+//             $("#black_bg").fadeOut();
+//             $("#loading_img").fadeOut();
+//         }
+//     });
+// }

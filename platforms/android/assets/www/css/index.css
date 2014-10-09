@@ -1,0 +1,195 @@
+/* my styles */
+.notice-red, .notice-signin {
+    list-style: none;
+    background-color: #F85A5A;
+    padding: 8px;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+#black_bg {
+    width: 100%;
+    height: 100%;
+    background: black; 
+    z-index: 1;
+    top: 0; 
+    left: 0; 
+    position: fixed;
+}
+
+#loading_img {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ height: 300px;
+ width: 400px;
+ margin-top: -150px; /* Half the height */
+ margin-left: -200px; /* Half the width */
+ opacity: 0.9;
+ z-index: 2;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#e67e22;
+    /*background-attachment:fixed;*/
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+    color: white;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+    opacity:  0.7;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+    opacity:  0.7;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+    opacity:  0.7;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+    opacity:  0.7;
+}
+
+.outer {
+    padding: 20px 0px;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 80%;
+}
+
+.app {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#auth-forms {
+    position: relative;
+}
+
+#sign-in-form {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+#signup_button, #signin_button {
+    font-family: 'Cookie', cursive;
+    font-size: 30px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8e44ad;
+    color: white;
+    margin: 20px 0px;
+}
+
+#sign-in-switch {
+    text-decoration: underline;
+}
+
+.input-transparent {
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    margin-top: 8px;
+    color: white;
+}
+
+h1, h5 {
+    font-family: 'Cookie', cursive;
+    color: white;
+    line-height: 90px;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid white;
+    /*margin: 1em 0;*/
+    padding: 0;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}

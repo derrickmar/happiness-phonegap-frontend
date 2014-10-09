@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+        <div id="black_bg" class="hidden"> </div>
+        <img src="img/loading_black.gif" id="loading_img" class="hidden" alt="Loading GIF">
+        <div id="deviceready" class="blink hidden">
+            <p class="event listening hid">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+            <div class="outer">
+            <div class="middle">
+            <div class="inner">
+                    <h1> H </h1> 
+                    <div id="auth-forms">
+                        <div id="sign-up-form" class="animated bounceInLeft">
+                            <ul class="notice-red hidden"></ul>
+                            <form accept-charset="UTF-8" method="post" data-remote="true">
+                               <div>
+                                <input class="input-transparent" autofocus="autofocus" type="email" name="email" placeholder="E-mail">
+                                </div>
+                                <hr>
+                                <div>
+                                    <input class="input-transparent" autocomplete="off" type="password" name="password" placeholder="Password">
+                                </div>
+                                <hr>
+                                <div>
+                                    <input class="input-transparent" autocomplete="off" type="password" name="password" placeholder="Password Confirmation">
+                                </div>
+                                <hr>
+                                <div>
+                                    <input class="submit-img" id="signup_button" name="commit" type="submit" value="Sign Up">
+                                </div>
+                            </form>
+                            Already have an account? <a id="sign_in_slide" href="#"> Sign In </a>
+                            <a href="counter.html">Counter</a>
+                        </div>
+                        <div id="sign-in-form" class="animated bounceOutRight">
+                            <ul class="notice-signin hidden">
+                                <li> • Email and Password Combination Incorrect </li>
+                            </ul>
+                            <form accept-charset="UTF-8" method="post" data-remote="true">
+                            <div>    
+                                <input class="input-transparent" autofocus="autofocus" type="email" name="signin-email" value="" placeholder="E-mail">
+                            </div>
+                            <hr>
+                            <div>
+                                <input class="input-transparent" autocomplete="off" type="password" name="signin-password" placeholder="Password">
+                            </div>
+                            <hr>
+                            <div>
+                                <input id="signin_button" name="commit" type="submit" value="Sign In">
+                            </div>
+                            </form>
+                            New User? <a id="sign_up_slide" href="#">Sign up</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
