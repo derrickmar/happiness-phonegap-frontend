@@ -1,45 +1,89 @@
-.notif-table {
-    background-color: #16a085;
-    display: table;
-    min-height: 80px;
-    width: 100%;
-    position: relative;
-}
+/*.fadeStyles {
+	-webkit-transition: display 2s ease;
+	}*/
 
-.notif-holder {
-    padding: 15px;
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-}
+	.popup {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.6);
+		z-index: 10;
+		display: table;
+	}
 
-.notif-desc {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: normal;
-}
+	.edit-notif-form {
+		display: table-cell;
+		vertical-align: middle;
+	}
 
-.notif-buttons {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 45px;
-    z-index: 2;
-}
+	#input-notif {
+		outline: none;
+		background-color: rgba(230, 126, 32, 0.9);
+		border: none;
+		font-size: 16px;
+		margin-top: 8px;
+		color: white;
+		width: 80%;
+		height: 70vh;
+		padding: 10px;
+	}
 
-.notif-overlay {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	background-color: rgba(0,0,0,0.6);
-}
+	.update_button {
+		font-family: 'Cookie', cursive;
+		font-size: 30px;
+		height: 50px;
+		width: 200px;
+		border: none;
+		border-radius: 8px;
+		background-color: #8e44ad;
+		color: white;
+		margin: 20px 0px;
+	}
+
+	.notif-table {
+		background-color: #16a085;
+		display: table;
+		min-height: 80px;
+		width: 100%;
+		position: relative;
+	}
+
+	.notif-holder {
+		padding: 15px;
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	.notif-desc {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	.notif-buttons {
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 45px;
+		z-index: 2;
+	}
+
+	.notif-overlay {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: rgba(0,0,0,0.6);
+	}
 
 /*.notif-buttons:after {
     background-color: #FEFFE5;
@@ -49,13 +93,17 @@
     right: 0;
     height: 15px;
     top: 40px;
-}*/
+    }*/
 
-.edit-notif, .trash-notif {
-    width: 50px;
-    height: auto;
-    float: none;
-    margin: 0px 10px;
-    cursor: pointer;
-}
-.edit-notif {} .trash-notif {}
+    .edit-notif, .trash-notif {
+    	width: 50px;
+    	height: auto;
+    	float: none;
+    	margin: 0px 10px;
+    	cursor: pointer;
+    }
+    .edit-notif {} .trash-notif {}
+
+    .hidden {
+    	display: none;
+    }

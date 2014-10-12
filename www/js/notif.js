@@ -19,20 +19,25 @@
                 var i = 0;
                 while (i < data.length) {
                     var desc = data[i].desc;
+                    var notifId = data[i].id;
+                    console.log(notifId);
                     // console.log(desc);
                     // var notifHolder = '<div class="notif-desc-holder"> <div class="notif-desc">' + desc + '</div> <div class="notif-buttons"> <img class="edit-notif" src="img/edit.png" alt="Add Time"> <img class="trash-notif" src="img/trash.png" alt="Add Time"> </div> </div>';
                     var notifHolder =
-                        '<div class="notif-table" style="background-color:' + colors[i] + '">' + '<div class="notif-overlay hidden"></div>\
-                        <div class="notif-holder">\
-                            <div class="notif-desc">' + desc +
-                        '</div>\
-                            <div class="notif-buttons animated hidden">  <img class="edit-notif" src="img/edit.png" alt="Add Time"> <img class="trash-notif" src="img/trash.png" alt="Add Time"> </div>\
-                        </div>\
-                    </div>';
-                    console.log(notifHolder);
+                        '<div class="notif-table" style="background-color:' + colors[i] + '">'
+                            + '<div class="notif-overlay hidden"></div>\
+                                <div class="notif-holder">\
+                                    <div class="notif-desc">'
+                                        + desc +
+                                     '</div>\
+                                <div class="notif-buttons animated hidden"' + 'data-notifid="' + notifId + '">\
+                                    <img class="edit-notif" src="img/edit.png" alt="Add Time">\
+                                    <img class="trash-notif" src="img/trash.png" alt="Add Time">\
+                                </div>\
+                            </div>\
+                        </div>';
                     $('.all-notifs').append(notifHolder);
                     i++
-                    console.log(i);
                 }
                 NotifButtons.onReady();
             },
@@ -41,6 +46,18 @@
             }
         });
 
+        $('.popup').on("click", function(e) {
+            // e.stopPropagation();/
+            $('.edit-notif-form').addClass('bounceOut').removeClass('bounceIn');
+            $(this).addClass('hidden');
+            // console.log('removing and adding height');
+            // $(this).css('height', '');
+            // $(this).css('height', '100%');
+        });
+
+        $('.input-notif').on("click", function(e) {
+            e.stopPropagation();
+        })
 
         // $(".notif-table").swipe({
         //     hold: function(event, target) {
@@ -60,7 +77,6 @@
     var NotifButtons = {
         // this is the object NotifButtons
         onReady: function() {
-            console.log('asdf');
             // if the document is clicked fadeout notifbuttons
             $(document).on('click', function(e) {
                 console.log('bubble up to document');
@@ -82,13 +98,58 @@
                 }
             });
 
-            $('edit-notif').on("click", function(e) {
+            $('.edit-notif').on("click", function(e) {
                 e.stopPropagation();
+                // console.log($(this).parent('.notif-buttons'));
+                console.log($(this).parent('.notif-buttons').attr("data-notifid"));
+                $('#input-notif').val($(this).parentsUntil('.notif-table').find('.notif-desc').text())   
+                $('.edit-notif-form').removeClass('bounceOut').addClass('bounceIn');
+                // $(".popup").fadeIn().css("display", "table");
+                $('.popup').removeClass('hidden');
+                
+                // NotifButtons.recieveEditForm($(this).parent('.notif-buttons').attr("data-notifid"))
+                // ajax call to recieve form
             });
         },
-        happy: function() {
-            console.log(this);
-            console.log('HAPPY');
+        recieveEditForm: function(id) {
+            var link = 'http://2fe788aa.ngrok.com/notifs/' + window.localStorage.getItem("id")
+            + "/edit?user_email=" + window.localStorage.getItem("email")
+            + "&user_token=" + window.localStorage.getItem("tkn");
+            console.log(link);
+            $.ajax({
+                // headers: {
+                //     Accept: "application/json; charset=utf-8"
+                // },
+                url: link,
+                type: 'GET',
+                success: function jsSuccess(data, textStatus, jqXHR) {
+                    console.log(data);
+                    $(data).contents().appendTo(".popup");
+                    // $(".popup").removeClass('hidden').addClass('bounceIn');
+
+                    // var i = 0;
+                    // while (i < data.length) {
+                    //     var desc = data[i].desc;
+                    //     var notifId = data[i].id;
+                    //     console.log(notifId);
+                    //     // console.log(desc);
+                    //     // var notifHolder = '<div class="notif-desc-holder"> <div class="notif-desc">' + desc + '</div> <div class="notif-buttons"> <img class="edit-notif" src="img/edit.png" alt="Add Time"> <img class="trash-notif" src="img/trash.png" alt="Add Time"> </div> </div>';
+                    //     var notifHolder =
+                    //         '<div class="notif-table" style="background-color:' + colors[i] + '"' + 'data-notifID="' + notifId + '">' + '<div class="notif-overlay hidden"></div>\
+                    //             <div class="notif-holder">\
+                    //                 <div class="notif-desc">' + desc +
+                    //         '</div>\
+                    //                 <div class="notif-buttons animated hidden">  <img class="edit-notif" src="img/edit.png" alt="Add Time"> <img class="trash-notif" src="img/trash.png" alt="Add Time"> </div>\
+                    //             </div>\
+                    //         </div>';
+                    //     $('.all-notifs').append(notifHolder);
+                    //     i++
+                    // }
+                },
+                error: function jsError(jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                }
+            });
         }
     }
 
