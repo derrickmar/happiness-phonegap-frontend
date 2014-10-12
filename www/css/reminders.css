@@ -6,26 +6,10 @@
    clear: both;
 }
 
-.header {
-	padding: 10px 0px;
-}
-
-h2 {
-    font-family: 'Cookie', cursive;
-    text-transform: none;
-	padding: 0;
-	margin: 0;
-	font-size: 30px;
-}
-
 #time-block {
 	padding: 30px;
 }
 
-#add-time-button {
-	height: 60px;
-	width: 60px;
-}
 
 #first {
 	background-color: #16a085;

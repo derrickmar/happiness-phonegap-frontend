@@ -1,3 +1,7 @@
+.sidebar {
+	z-index: 100;
+}
+
 .settings-icon {
 	padding-top: 10px;
 	padding-bottom: 50px;

@@ -43,6 +43,7 @@
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/sign_in.html \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/snippets.txt \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/css/animate.css \
+/Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/css/header.css \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/css/index.css \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/css/notifs.css \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/css/reminders.css \
