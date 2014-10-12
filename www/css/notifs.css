@@ -30,7 +30,7 @@
 		padding: 10px;
 	}
 
-	.update_button {
+	.update_button, .create_button {
 		font-family: 'Cookie', cursive;
 		font-size: 30px;
 		height: 50px;
