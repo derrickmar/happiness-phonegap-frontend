@@ -58,6 +58,7 @@
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/img/smile.png \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/img/svg_13864.zip \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/img/trash.png \
+/Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/js/colors.js \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/js/cookies.js \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/js/index.js \
 /Users/dmar/Dropbox/webdev_technology/phonegap_projects/usermodel2/platforms/android/assets/www/js/jquery.touchSwipe.min.js \

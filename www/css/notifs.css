@@ -1,55 +1,61 @@
-.notif-desc-holder {
-	background-color: #16a085;
-	padding: 15px;
-	min-height: 90px;
-	position: relative;
+.notif-table {
+    background-color: #16a085;
+    display: table;
+    min-height: 80px;
+    width: 100%;
+    position: relative;
 }
 
-.notif-desc-holder:after {
-	content: " ";
-	display: block; 
-	height: 0; 
-	clear: both;
+.notif-holder {
+    padding: 15px;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
 }
 
 .notif-desc {
-	font-size: 16px;
-	font-weight: normal;
-	text-align: left;
-	width: 85%;
-	height: 100%;
-	float: left;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
 }
 
-/*
-	.Absolute-Center {
-	  margin: auto;
-	  position: absolute;
-	  top: 0; left: 0; bottom: 0; right: 0;
-	}
-*/
 .notif-buttons {
-	float: right;
-	position: relative;
-	width: 15%;
-	overflow: visible;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 45px;
+    z-index: 2;
 }
+
+.notif-overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.6);
+}
+
+/*.notif-buttons:after {
+    background-color: #FEFFE5;
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    height: 15px;
+    top: 40px;
+}*/
 
 .edit-notif, .trash-notif {
-	width: 40px;
-	height: auto;
-	float: right;
+    width: 50px;
+    height: auto;
+    float: none;
+    margin: 0px 10px;
+    cursor: pointer;
 }
-
-.edit-notif {
-	position: absolute;
-	top: -16px;
-	top: 0px;
-	right: 0px;
-}
-
-.trash-notif {
-	position: absolute;
-	top: 45px;
-	right: 0px;
-}
+.edit-notif {} .trash-notif {}
