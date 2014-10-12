@@ -118,10 +118,6 @@ body {
     margin: 20px 0px;
 }
 
-#sign-in-switch {
-    text-decoration: underline;
-}
-
 .input-transparent {
     outline: none;
     background-color: transparent;

@@ -1,0 +1,46 @@
+.notif-desc-holder {
+	background-color: #16a085;
+	padding: 15px;
+	min-height: 90px
+}
+
+.notif-desc-holder:after {
+	content: " ";
+	display: block; 
+	height: 0; 
+	clear: both;
+}
+
+.notif-desc {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: left;
+	width: 85%;
+	float: left;
+}
+
+.notif-buttons {
+	float: right;
+	position: relative;
+	width: 15%;
+	overflow: visible;
+}
+
+.edit-notif, .trash-notif {
+	width: 40px;
+	height: auto;
+	float: right;
+}
+
+.edit-notif {
+	position: absolute;
+	top: -16px;
+	top: 0px;
+	right: 0px;
+}
+
+.trash-notif {
+	position: absolute;
+	top: 45px;
+	right: 0px;
+}

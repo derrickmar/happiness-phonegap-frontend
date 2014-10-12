@@ -15,7 +15,8 @@ message.addData('soundname','beep.wav'); //Sound to play upon notification recei
 message.timeToLive = 30;// Duration in seconds to hold in GCM and retry before timing out. Default 4 weeks (2,419,200 seconds) if not specified.
  
 // At least one reg id required
-registrationIds.push('APA91bGq79oO_F_4XZIGgKkt_UQEGpWoEw8OVlAzLJVWGHTs61rQzw6xVrl2fIaEsi9tqVg5l0yAjdmHdWeyyVkEPVmQx4GbVtQUgwlvBT9veJqQbuwf9-nbBd23nP1uKrPJkmJd1aoQ5dgBtBSPkaLXuWR_jF0cgNZeG_gj5PQ0NraVZFUMzno');
+registrationIds.push('APA91bGq79oO_F_4XZIGgKkt_UQEGpWoEw8OVlAzLJVWGHTs61rQzw6xVrl2fIaEsi9tqVg5l0yAjdmHdWeyyVkEPVmQx4GbVtQUgwlvBT9veJqQbuwf9-nbBd23nP1uKrPJkmJd1aoQ5dgBtBSPkaLXuWR_jF0cgNZeG_gj5PQ0NraVZFUMzno')
+
 /**
  * Parameters: message-literal, registrationIds-array, No. of retries, callback-function
  */

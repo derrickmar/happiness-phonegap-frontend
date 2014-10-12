@@ -1,0 +1,50 @@
+.settings-icon {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	padding-right: 150px;
+	position: absolute;
+	top: 0;
+	left: -20px;
+}
+
+.settings-icon:hover {
+	cursor: pointer;
+}
+
+.settings-bar {
+	height: 5px;
+	width: 40px;
+	background-color: white;
+	margin-bottom: 8px;
+}
+
+.sidebar-slidein {
+	background-color: #8e44ad;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	border-right: 3px solid white;
+	-webkit-animation-duration: 0.5s;
+}
+
+.sidebar-slidein a {
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar-tabs {
+	font-family: 'Cookie', cursive;
+	font-size: 22px;
+	border-bottom: 3px solid white;
+	padding: 20px 25px;
+}
+
+.sidebar-tabs-first {
+	border-top: 3px solid white;
+}
+
+#sidebar-logo {
+	font-size: 48px;
+	padding: 20px 0px 10px 0px;
+}
